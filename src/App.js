@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+
+/*
+
+Rules of hooks
+1.Must be written inside function component
+2.Must be imported in component
+3.Must be call at top level of component
+4.Cannot be conditional
+
+*/
 import './App.css';
+import {React,useState} from 'react';
+
 
 function App() {
+  const [count,setCnt]=useState(0);
+  function updateCnt(){
+    setCnt(count+1);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <h1>Button Clicked {count} times </h1>
+      <button onCLick={updateCnt}>Click</button>
     </div>
   );
 }
 
 export default App;
+
