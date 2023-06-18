@@ -1,15 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-// import App from './App';
-import Main from './Main';
+import App from './App';
+// import Main from './Main';
 import reportWebVitals from './reportWebVitals';
+// import Calculator from './Calculator';
+// import ColorPicker from './ColorPicker';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <App/>
     {/* <Main/> */}
+    {/* {<Calculator/>} */}
+    {/* {<ColorPicker/>} */}
   </React.StrictMode>
 );
 
